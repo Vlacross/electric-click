@@ -1,0 +1,73 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 2em;
+}
+
+.bodyHouse {
+  display: flex;
+  justify-content: space-around;
+}
+
+.startHouse {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.restartHouse {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.bannerTitle {
+  display:flex;
+  flex-direction: column;
+}
+
+.rules {
+  line-height: 2;
+}
+
+.step {
+  border: solid 1px black;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  transition-duration: 300ms;
+}
+
+.step:hover {
+  border-radius: 4px;
+  border: solid 2px rgb(153, 0, 0);
+  background-color: blue;
+  box-shadow: 0px 0px 45px rgb(153, 0, 0);
+}
+
+.charged {
+  border: solid 2px rgb(2, 175, 255);
+  background-color: rgb(2, 175, 255);
+  box-shadow: 0px 0px 45px rgb(2, 175, 255);
+  border-radius: 20px;
+  
+}
+
+.uncharged {
+  border-radius: 4px;
+  border: solid 2px rgb(153, 0, 0);
+  background-color: blue;
+  box-shadow: 0px 0px 45px rgb(153, 0, 0);
+}
+
+.hidden {
+  display: none;
+}
