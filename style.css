@@ -38,6 +38,13 @@ body {
   line-height: 2;
 }
 
+.failMessage {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+}
+
 .step {
   border: solid 1px black;
   width: 40px;

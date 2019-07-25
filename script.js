@@ -68,8 +68,17 @@ const countDown = (bank) => {
   }
 }
 
+function showFail() {
+  document.querySelector('.banner').classList.toggle('hidden')
+  document.querySelector('.bodyHouse').classList.toggle('hidden')
+  document.querySelector('.startButton').classList.toggle('hidden')
+  document.querySelector('.restartButton').classList.toggle('hidden')
+  document.querySelector('.failMessage').classList.toggle('hidden')
+}
+
 function fail() {
   startOver()
+  showFail()
   console.log('juh fulled...')
 }
 
@@ -109,12 +118,9 @@ const gameTrack = () => {
   
    if(!leftSensor() || !rightSensor()) {
     return fail()
-     // console.log(leftSensor(), 'leftSensor()')
-     // console.log(rightSensor(), 'rightSensor()')
     }
     if (count === 10) {
       levelUp()
-      // console.log('levvellin', count)
     }
 }
 
@@ -152,4 +158,6 @@ let left = document.querySelector(".leftBumper").addEventListener("click", e => 
 let right = document.querySelector(".rightBumper").addEventListener("click", e => {  count++; recharge(rightBank) })
 
 
-let info = document.querySelector(".infoButton").addEventListener("click", e => handleDisplays())
+let infoToggle = document.querySelector(".infoButton").addEventListener("click", e => handleDisplays())
+let failMessageToggle = document.querySelector(".failToggle").addEventListener("click", e => showFail())
+
